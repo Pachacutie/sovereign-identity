@@ -100,4 +100,4 @@ MIT — use it however you want.
 ---
 
 *Built by Pachacutie.*
-*Building sovereign AI architecture in public. Follow along on [X](https://x.com/pachacutie).*
+*Building sovereign AI architecture in public. Follow along on [X](https://x.com/pachacutie_exe).*
