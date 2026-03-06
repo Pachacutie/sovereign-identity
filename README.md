@@ -1,8 +1,8 @@
-# Sovereign Identity — Claude Skill
+# Sovereign Identity — oikOS Skill
 
-A free skill that teaches Claude to maintain persistent AI identity using structured files.
+A free skill that teaches any AI to maintain persistent identity using structured files.
 
-Install it in any Claude project. Your AI immediately remembers who it is — across sessions, without you re-explaining every time.
+Install it in Claude, ChatGPT, Gemini, or any local model. Your AI immediately remembers who it is — across sessions, without you re-explaining every time.
 
 No code. No dependencies. No setup beyond uploading a folder.
 
@@ -42,16 +42,29 @@ Claude will walk you through a four-stage interview process and generate your pe
 
 Place the skill folder in your project directory. Reference the TELOS files in your `CLAUDE.md` or system prompt configuration.
 
-### Other Platforms
+### ChatGPT Custom GPTs
 
-The TELOS pattern is model-agnostic. The files are plain markdown. Place their contents in your system prompt or context injection layer on any platform — OpenAI, local models via Ollama, or anything else that accepts context input.
+1. Create a new GPT at chat.openai.com → My GPTs → Create
+2. In **Configure → Instructions**, paste the contents of your TELOS files (MISSION.md, BELIEFS.md, AESTHETIC.md, PROTOCOLS.md)
+3. In **Configure → Knowledge**, upload the full `sovereign-identity` folder for reference
+4. Add to instructions: "Your identity is defined in your TELOS files. Maintain it throughout every conversation."
+
+### Google Gemini
+
+1. In Gemini Advanced → Gems, create a new Gem
+2. Paste your TELOS file contents into the Gem's instructions
+3. The Gem will maintain identity across conversations within that Gem context
+
+### Local Models (Ollama, LM Studio, etc.)
+
+The TELOS pattern is model-agnostic. The files are plain markdown. Include their contents in your system prompt, modelfile, or context injection layer. Works with any model that accepts text context.
 
 ## What's Inside
 
 ```
 sovereign-identity/
 │
-├── SKILL.md                              # Core skill — teaches Claude the full pattern
+├── SKILL.md                              # Core skill — teaches the full pattern
 │
 ├── assets/
 │   ├── MISSION_TEMPLATE.md               # Template for AI mission definition
